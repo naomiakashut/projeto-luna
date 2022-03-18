@@ -1,48 +1,32 @@
 <template>
-<div>
-  <v-app-bar app color="green" dark>
-    <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-    <v-toolbar-title>
-      Campeonato Brasileiro ⚽
-    </v-toolbar-title>
-  </v-app-bar>
-
-  <v-navigation-drawer v-model="drawer" absolute temporary>
-    <v-list nav dense>
-      <v-list-item-group v-model="group" active-class="green--text text--lighten-2">
-
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>
-            Início
-          </v-list-item-title>
-        </v-list-item>
-
-        <v-list-item>
-          <v-list-item-icon>
-            <v-icon>mdi-account</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>
-            Classificação
-          </v-list-item-title>
-        </v-list-item>
-
-      </v-list-item-group>
-    </v-list>
-  </v-navigation-drawer>
+  <div class="app-top-bar">
+    <v-app-bar>
+      <v-spacer />
+      <v-toolbar-title><h3><strong>Coleta Seletiva</strong> ♻️</h3></v-toolbar-title>
+      <v-spacer />
+    </v-app-bar>
   </div>
 </template>
 
+
 <script>
 export default {
-  name: 'AppTopBar',
+  name: "AppTopBar",
   data() {
     return {
-      drawer: false,
-      group: null,
-    }
-  }
+      value: 0,
+    };
+  },
 };
 </script>
+
+<style scoped>
+    .app-top-bar a{
+            text-decoration: none;
+            display:flex;
+            justify-content: center;
+            flex-grow: 1;
+            text-transform: uppercase;
+             
+    }
+</style>
